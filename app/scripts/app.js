@@ -20,9 +20,12 @@ angular
   .config(function ($routeProvider) {
     $routeProvider
       .when('/', {
-        templateUrl: 'views/main.html',
+      /*  templateUrl: 'views/main.html',
         controller: 'MainCtrl',
-        controllerAs: 'main'
+        controllerAs: 'main'*/
+            templateUrl: 'views/home.html',
+            controller: 'HomeCtrl',
+            controllerAs: 'home'
       })
       .when('/about', {
         templateUrl: 'views/about.html',
@@ -68,6 +71,16 @@ angular
         templateUrl: 'views/thanku.html',
         controller: 'ThankuCtrl',
         controllerAs: 'thanku'
+      })
+      .when('/honeymoon', {
+        templateUrl: 'views/honeymoon.html',
+        controller: 'HoneymoonCtrl',
+        controllerAs: 'honeymoon'
+      })
+      .when('/carosal', {
+        templateUrl: 'views/carosal.html',
+        controller: 'CarosalCtrl',
+        controllerAs: 'carosal'
       })
       .otherwise({
         redirectTo: '/'

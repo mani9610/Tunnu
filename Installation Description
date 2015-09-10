@@ -1,0 +1,51 @@
+Development Setup
+
+1. Installing Node.js
+Check if you have already installed and the version using the following command
+
+node -v
+make sure it is v0.12 or greater, or install/update your node run the command
+
+curl -sL https://deb.nodesource.com/setup_0.12 | sudo bash -
+sudo apt-get install -y nodejs
+2. Yeoman Generator
+This guy will help us scaffold a lot of code
+
+sudo npm install -g yo
+yeoman supports generator for different kinds of project. we have to install those
+generators separately you can find more of them at yeoman
+for our session we will be using generator-angular. install it using
+
+sudo npm install -g generator-angular
+3. Create first project
+using the above generator and the yo tool we can generate a sample angular app. which we can build on.
+
+mkdir todo
+cd todo
+yo angular todo
+Would you like to use Sass (with Compass)? No
+Would you like to include Bootstrap? Yes
+Enter on the module selection page
+above command will create a basic project inside the todo directory. This has only project specific code.
+
+4. Installing dependencies
+now we should download all the dependent libraries
+run the following command for that
+
+npm install bower grunt grunt-cli
+
+npm install
+
+bower install
+WARNING: if you get EACCESS Error in any of the above command try running them with sudo
+5. Running the project
+Now our code base is setup. This project include following things
+
+Grunt - task runner
+Bower - client dependancy manager
+NPM - Node packaga manange
+Karma - Test Runner
+
+To view our project we need a server. Grunt got a task which will create a web server and host our code so that we can view our projects. It also comes with a watch/live reload so whenever you make change to your files they will automatically updated.
+grunt serve
+It will open up a browser http://localhost:9000 and you can see your project
